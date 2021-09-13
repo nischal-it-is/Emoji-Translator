@@ -2,3 +2,9 @@
   font-family: sans-serif;
   text-align: center;
 }
+input {
+  margin: 1rem;
+  padding: 1rem;
+  width: 80%;
+  display: block;
+}
