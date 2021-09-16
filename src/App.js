@@ -6,14 +6,14 @@ const emojiDictionary = {
   "😔": "sad",
   "🥡": "takeout box",
   "❤️": "love",
-  "😑": "annoyance" ,
-  "🥰":"Smiling Face with Hearts",
+  "😑": "annoyance",
+  "🥰": "Smiling Face with Hearts",
   "🤣": "Rolling on the Floor Laughing",
   "🤩": "Star-Struck",
   "😭": "Loudly Crying Face"
 };
-//var user = prompt("Enter User Name");
-var user = "Nischal";
+var user = prompt("Enter User Name");
+//var user = "Nischal";
 var count = 0;
 const emojisWeKnow = Object.keys(emojiDictionary);
 export default function App() {
@@ -33,9 +33,8 @@ export default function App() {
     }
     setMeaning(emojiMeaning);
   }
-  function secondaryemojiClickHandler(emoji)
-  {
-    var emojiMeaning=emojiDictionary[emoji];
+  function secondaryemojiClickHandler(emoji) {
+    var emojiMeaning = emojiDictionary[emoji];
     setMeaning(emojiMeaning);
   }
   return (
@@ -46,7 +45,7 @@ export default function App() {
       <button onClick={likeClickHandler}>Like</button>
       <h2>{likeCounter}</h2> */}
       <h4>{emoji}</h4>
-        {/* <ul>
+      {/* <ul>
             {
               emojis.map(item=>
               {
@@ -54,19 +53,17 @@ export default function App() {
               })
             }
         </ul> */}
-        <h3>emojis we know</h3>
-        {emojisWeKnow.map(item=>
-        {
-            return <span 
-            onClick={()=>secondaryemojiClickHandler(item)}
-            style={{cursor:"Pointer",padding:"0.5rem",fontSize:"larger"}}>
-           
+      <h3>emojis we know</h3>
+      {emojisWeKnow.map((item) => {
+        return (
+          <span
+            onClick={() => secondaryemojiClickHandler(item)}
+            style={{ cursor: "Pointer", padding: "0.5rem", fontSize: "larger" }}
+          >
             {item}
-            </span>
-          })
-        }
-        
-        
+          </span>
+        );
+      })}
     </div>
-  )
+  );
 }
