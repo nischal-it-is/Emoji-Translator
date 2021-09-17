@@ -10,10 +10,11 @@ const emojiDictionary = {
   "🥰": "Smiling Face with Hearts",
   "🤣": "Rolling on the Floor Laughing",
   "🤩": "Star-Struck",
-  "😭": "Loudly Crying Face"
+  "😭": "Loudly Crying Face",
+  "": ""
 };
-var user = prompt("Enter User Name");
-//var user = "Nischal";
+//var user = prompt("Enter User Name");
+var user = "Nischal";
 var count = 0;
 const emojisWeKnow = Object.keys(emojiDictionary);
 export default function App() {
